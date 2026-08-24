@@ -1,4 +1,4 @@
-baseURL = 'https://resilient-roi.github.io/GH-SITE/'
+baseURL = 'https://resilientroi.com/'
 languageCode = 'en-us'
 title = 'Resilient ROI'
 theme = 'PaperMod'
@@ -16,6 +16,15 @@ copyright = '&copy; dbj.org'
   comments = false
   TocOpen = false
   defaultTheme = 'auto'
+
+[params.assets]
+  favicon = '/favicon/favicon.ico'
+  favicon16x16 = '/favicon/favicon-16x16.png'
+  favicon32x32 = '/favicon/favicon-32x32.png'
+  apple_touch_icon = '/favicon/apple-touch-icon.png'
+  safari_pinned_tab = '/favicon/safari-pinned-tab.svg'
+  theme_color = '#23506f'
+  msapplication_TileColor = '#23506f'
 
 [params.profileMode]
   enabled = false

@@ -1,10 +1,8 @@
-{{- /* Favicons: drop files into static/favicon/ then uncomment.
+{{- /* Favicons generated from static/logo-rroi-512.png.
+       ico/16/32/apple-touch are wired through [params.assets] in hugo.toml
+       so PaperMod emits them itself; these two it does not cover. */ -}}
 <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-<link rel="shortcut icon" href="/favicon/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
 <link rel="manifest" href="/favicon/site.webmanifest" />
-*/ -}}
 {{- /* Mermaid — only loaded on pages that actually contain a diagram. */ -}}
 {{- if findRE "language-mermaid" .Content }}
 {{- $mermaid := resources.Get "js/mermaid.min.js" | fingerprint }}
