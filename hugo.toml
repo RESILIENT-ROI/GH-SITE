@@ -1,0 +1,55 @@
+baseURL = 'https://resilient-roi.github.io/GH-SITE/'
+languageCode = 'en-us'
+title = 'Resilient ROI'
+theme = 'PaperMod'
+paginate = 10
+copyright = '&copy; dbj.org'
+
+[params]
+  author = 'Dusan B. Jovanovic'
+  description = ''
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = false
+  comments = false
+  TocOpen = false
+  defaultTheme = 'auto'
+  homeInfoParams = { Title = 'Resilient ROI', Content = '' }
+  homeGridStyle = true
+
+[params.profileMode]
+  enabled = false
+
+# Comments via Giscus — set comments = true above and fill these in.
+# [params.giscus]
+#   repo = "RESILIENT-ROI/GH-SITE"
+#   repoId = ""
+#   category = "General"
+#   categoryId = ""
+#   mapping = "pathname"
+#   strict = "0"
+#   reactionsEnabled = "1"
+#   emitMetadata = "0"
+#   inputPosition = "top"
+#   theme = "preferred_color_scheme"
+#   lang = "en"
+#   loading = "lazy"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+
+[menu]
+  [[menu.main]]
+    name = 'Posts'
+    url = '/posts/'
+    weight = 1
+  [[menu.main]]
+    name = 'Search'
+    url = '/search/'
+    weight = 2

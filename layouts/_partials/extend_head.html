@@ -1,0 +1,48 @@
+{{- /* Favicons: drop files into static/favicon/ then uncomment.
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+<link rel="shortcut icon" href="/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="/favicon/site.webmanifest" />
+*/ -}}
+{{- /* Mermaid — only loaded on pages that actually contain a diagram. */ -}}
+{{- if findRE "language-mermaid" .Content }}
+{{- $mermaid := resources.Get "js/mermaid.min.js" | fingerprint }}
+<script defer id="mermaid-lib" src="{{ $mermaid.RelPermalink }}" integrity="{{ $mermaid.Data.Integrity }}"></script>
+<script>
+  window.addEventListener("load", function () {
+    // Hugo renders ```mermaid fences as <pre><code class="language-mermaid">.
+    // Mermaid expects plain <pre class="mermaid">, so rewrite them first.
+    document.querySelectorAll("pre > code.language-mermaid").forEach(function (code) {
+      var pre = document.createElement("pre");
+      pre.className = "mermaid";
+      pre.textContent = code.textContent;
+      code.parentElement.replaceWith(pre);
+    });
+
+    if (!document.querySelectorAll("pre.mermaid").length) return;
+
+    // Diagrams stay black-on-white in both site themes, matching print/slide use.
+    mermaid.initialize({
+      startOnLoad: false,
+      securityLevel: "loose", // diagrams use <b>/<br/>/<hr/> inside node labels
+      theme: "base",
+      fontFamily: "Helvetica, Arial, sans-serif",
+    });
+    mermaid.run({ querySelector: "pre.mermaid" });
+  });
+</script>
+{{- end }}
+<style>
+  .entry-tags a {
+    color: #888;
+    text-decoration: none;
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 4px 6px 4px 0;
+  }
+  .entry-tags a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+</style>
