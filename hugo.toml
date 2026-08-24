@@ -2,23 +2,20 @@ baseURL = 'https://resilient-roi.github.io/GH-SITE/'
 languageCode = 'en-us'
 title = 'Resilient ROI'
 theme = 'PaperMod'
-paginate = 10
 copyright = '&copy; dbj.org'
 
 [params]
   author = 'Dusan B. Jovanovic'
   description = ''
-  ShowReadingTime = true
+  ShowReadingTime = false
   ShowShareButtons = false
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
+  ShowPostNavLinks = false
+  ShowBreadCrumbs = false
   ShowCodeCopyButtons = true
   ShowToc = false
   comments = false
   TocOpen = false
   defaultTheme = 'auto'
-  homeInfoParams = { Title = 'Resilient ROI', Content = '' }
-  homeGridStyle = true
 
 [params.profileMode]
   enabled = false
@@ -42,14 +39,7 @@ copyright = '&copy; dbj.org'
   unsafe = true
 
 [outputs]
-  home = ['HTML', 'RSS', 'JSON']
+  home = ['HTML']
 
+# Add pages as content/<name>.md, then list them here.
 [menu]
-  [[menu.main]]
-    name = 'Posts'
-    url = '/posts/'
-    weight = 1
-  [[menu.main]]
-    name = 'Search'
-    url = '/search/'
-    weight = 2
