@@ -52,3 +52,7 @@ copyright = '&copy; Resilient ROI Ltd. | London, UK'
 
 # Add pages as content/<name>.md, then list them here.
 [menu]
+  [[menu.main]]
+    name = "Legacy Tech"
+    url = "/legacy-tech-is-in-a-pit-crew/"
+    weight = 10
