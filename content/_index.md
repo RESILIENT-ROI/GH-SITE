@@ -8,4 +8,4 @@ version: 0.1
 
 <br/>
 
-AI or no AI. Work is measured by what it returns.
+Work is measured by what it returns. AI or no AI. 
