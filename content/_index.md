@@ -6,4 +6,6 @@ version: 0.1
 
 ![alt text](rroi.png)
 
-Work is measured by what it returns.
+<br/>
+
+AI or no AI. Work is measured by what it returns.

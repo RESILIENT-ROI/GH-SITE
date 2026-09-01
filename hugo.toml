@@ -2,7 +2,7 @@ baseURL = 'https://resilientroi.com/'
 languageCode = 'en-us'
 title = 'Resilient ROI'
 theme = 'PaperMod'
-copyright = '&copy; dbj.org'
+copyright = '&copy; Resilient ROI Ltd. | London, UK'
 
 [params]
   author = 'Dusan B. Jovanovic'
